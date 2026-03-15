@@ -1,0 +1,172 @@
+[系統] 未偵測到 NVIDIA GPU，使用 CPU 進行運算。
+
+==================================================
+ 🌍 Sentin-AI 宏觀與產業鏈投資分析系統 (SASA Top-Down)
+==================================================
+
+>>> 階段 1：獲取全球總經局勢 <<<
+[宏觀分析] 正在抓取全球重大財經新聞...
+
+【當前世界局勢總結】:
+--------------------------------------------------
+無法取得新聞，預設局勢為：中立平穩。
+--------------------------------------------------
+
+>>> 階段 2：LLM 產業鏈與板塊輪動推演 <<<
+[產業推演] 正在根據局勢映射受惠產業與個股...
+[警告] 呼叫 Ollama 推演產業鏈失敗: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/generate (Caused by NewConnectionError("HTTPConnection(host='localhost', port=11434): Failed to establish a new connection: [WinError 10061] 無法連線，因為目標電腦拒絕連線。"))
+
+【短期受惠產業】:
+
+- 產業：能源與原物料
+  > 理由：地緣政治不確定性推升避險情緒與物價
+  > 產業鏈：原油開採 -> 黃金
+  > 關注標的：XOM, GLD
+
+【長期趨勢產業】:
+
+- 產業：AI 與半導體
+  > 理由：長期算力需求不可逆，基礎建設持續成長
+  > 產業鏈：晶片設計 -> 晶圓代工 -> 伺服器組裝
+  > 關注標的：NVDA, 2330.TW, 2382.TW
+
+==================================================
+>>> 階段 3：個股主觀邏輯信心分析 (SL Brain) <<<
+==================================================
+
+--- 分析標的：NVDA ---
+
+[資料引擎] 正在抓取 NVDA 的數據...
+[資料引擎] 找到 8 則過去 24 小時內的新聞。
+[資料引擎] 正在抓取歷史股價...
+[資料引擎] 最新收盤價: 186.03, 20日均線: 185.39
+
+[LLM 語意分析]
+-> 無法連線至 Ollama (localhost:11434)，改用簡易關鍵字模擬情緒。
+- 新聞: Meta to develop 4 new AI chips. Can it stack up to the competition?
+  -> 關鍵字判斷: 利多 (+1)
+- 新聞: Richard Haass warns the geopolitical risk tax will burden markets for years to come
+  -> 關鍵字判斷: 中立
+- 新聞: The Best 3 Industrial Stocks to Buy in March
+  -> 關鍵字判斷: 利多 (+1)
+- 新聞: Intuitive Surgical Stock: Buy, Sell, or Hold?
+  -> 關鍵字判斷: 利多 (+1)
+- 新聞: Is Bloom Energy Stock Going to $200?
+  -> 關鍵字判斷: 中立
+- 新聞: Dow Jones Futures Fall As Oil Prices Surge Above $90 On Tanker Attacks, Port Disruption
+  -> 關鍵字判斷: 利多 (+1)
+- 新聞: 1 Millionaire-Maker Artificial Intelligence (AI) Stock To Buy
+  -> 關鍵字判斷: 利多 (+1)
+- 新聞: Why Oracle Stock Popped Today
+  -> 關鍵字判斷: 中立
+
+[證據提取] 總正面證據 (r) = 新聞(5) + 技術面(1) = 6
+[證據提取] 總負面證據 (s) = 新聞(0) + 技術面(0) = 0
+
+[主觀邏輯引擎] 開始計算...
+
+--- 分析標的：XOM ---
+
+[資料引擎] 正在抓取 XOM 的數據...
+[資料引擎] 找到 6 則過去 24 小時內的新聞。
+[資料引擎] 正在抓取歷史股價...
+[資料引擎] 最新收盤價: 151.58, 20日均線: 150.08
+
+[LLM 語意分析]
+-> 無法連線至 Ollama (localhost:11434)，改用簡易關鍵字模擬情緒。
+- 新聞: Is Exxon Mobil (XOM) Still Attractive After Strong Five-Year Share Price Gains?
+  -> 關鍵字判斷: 利多 (+1)
+- 新聞: Stock Market Today, March 11: Oracle Surges as Markets Weigh Geopolitical Risks
+  -> 關鍵字判斷: 利多 (+1)
+- 新聞: The IEA to Release Record Amount of Oil From Reserves. Why Crude Prices Are Higher.
+  -> 關鍵字判斷: 利多 (+1)
+- 新聞: Lone Star Ambitions: More Public Companies Propose Moving to Texas
+  -> 關鍵字判斷: 中立
+- 新聞: 156-year-old energy king evacuates Middle East staff
+  -> 關鍵字判斷: 中立
+- 新聞: A Move to Release Millions of Barrels of Oil Hasn't Kept Oil Prices Down
+  -> 關鍵字判斷: 利空 (+1)
+
+[證據提取] 總正面證據 (r) = 新聞(3) + 技術面(1) = 4
+[證據提取] 總負面證據 (s) = 新聞(1) + 技術面(0) = 1
+
+[主觀邏輯引擎] 開始計算...
+
+--- 分析標的：2330.TW ---
+
+[資料引擎] 正在抓取 2330.TW 的數據...
+[資料引擎] 找到 7 則過去 24 小時內的新聞。
+[資料引擎] 正在抓取歷史股價...
+[資料引擎] 最新收盤價: 1885.00, 20日均線: 1917.31
+
+[LLM 語意分析]
+-> 無法連線至 Ollama (localhost:11434)，改用簡易關鍵字模擬情緒。
+- 新聞: Foreign Stocks Are Reeling From the Iran War. Buying the Dip Could Pay Off.
+  -> 關鍵字判斷: 利多 (+1)
+- 新聞: Dow Jones Futures Fall As Oil Prices Surge Above $90 On Tanker Attacks, Port Disruption
+  -> 關鍵字判斷: 利多 (+1)
+- 新聞: TSMC (TSM) Rises As Market Takes a Dip: Key Facts
+  -> 關鍵字判斷: 中立
+- 新聞: Meta Expands In-House AI Chip Roadmap
+  -> 關鍵字判斷: 中立
+- 新聞: Prediction: 2 Stocks That Will Be Worth More Than Amazon 3 Years From Now
+  -> 關鍵字判斷: 中立
+- 新聞: Nvidia Bucks U.S.-Iran Jitters As Tech Shines; Is Nvidia A Buy Or Sell Now?
+  -> 關鍵字判斷: 利多 (+1)
+- 新聞: Meta unveils four custom AI chips for data center growth
+  -> 關鍵字判斷: 利多 (+1)
+
+[證據提取] 總正面證據 (r) = 新聞(4) + 技術面(0) = 4
+[證據提取] 總負面證據 (s) = 新聞(0) + 技術面(1) = 1
+
+[主觀邏輯引擎] 開始計算...
+
+--- 分析標的：GLD ---
+
+[資料引擎] 正在抓取 GLD 的數據...
+[資料引擎] 找到 3 則過去 24 小時內的新聞。
+[資料引擎] 正在抓取歷史股價...
+[資料引擎] 最新收盤價: 476.24, 20日均線: 470.29
+
+[LLM 語意分析]
+-> 無法連線至 Ollama (localhost:11434)，改用簡易關鍵字模擬情緒。
+- 新聞: Gold's Rebound Says Something About Markets
+  -> 關鍵字判斷: 中立
+- 新聞: Update: Gold Prices Fall on a Higher Dollar as U.S. Consumer Prices Rose As Expected Last Month
+  -> 關鍵字判斷: 利多 (+1)
+- 新聞: Middle East Risks Keep Markets Uneasy: ETFs to Consider
+  -> 關鍵字判斷: 中立
+
+[證據提取] 總正面證據 (r) = 新聞(1) + 技術面(1) = 2
+[證據提取] 總負面證據 (s) = 新聞(0) + 技術面(0) = 0
+
+[主觀邏輯引擎] 開始計算...
+
+--- 分析標的：2382.TW ---
+
+[資料引擎] 正在抓取 2382.TW 的數據...
+[資料引擎] 找到 0 則過去 24 小時內的新聞。
+[資料引擎] 正在抓取歷史股價...
+[資料引擎] 最新收盤價: 288.50, 20日均線: 288.73
+   [系統] 尚未抓取到近期新聞，使用預設模擬新聞。
+
+[LLM 語意分析]
+-> 無法連線至 Ollama (localhost:11434)，改用簡易關鍵字模擬情緒。
+- 新聞: 2382.TW market sentiment remains stable amid broader economic trends
+  -> 關鍵字判斷: 中立
+
+[證據提取] 總正面證據 (r) = 新聞(0) + 技術面(0) = 0
+[證據提取] 總負面證據 (s) = 新聞(0) + 技術面(1) = 1
+
+[主觀邏輯引擎] 開始計算...
+
+==================================================
+ 📊 最終決策報告總結
+==================================================
+ Ticker  b 確信度  d 不相信度  u 不確定性     建議
+   NVDA 0.7500  0.0000  0.2500 🟢 【買入】
+    XOM 0.5714  0.1429  0.2857 🟡 【觀望】
+2330.TW 0.5714  0.1429  0.2857 🟡 【觀望】
+    GLD 0.5000  0.0000  0.5000 🟡 【觀望】
+2382.TW 0.0000  0.3333  0.6667 🟡 【觀望】
+==================================================

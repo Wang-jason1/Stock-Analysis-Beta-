@@ -1,0 +1,45 @@
+[系統] 未偵測到 NVIDIA GPU，使用 CPU 進行運算。
+
+========================================
+ Sentin-AI 股市決策系統 (SASA) 啟動
+========================================
+
+[資料引擎] 正在抓取 2330.TW 的數據...
+[資料引擎] 找到 8 則過去 24 小時內的新聞。
+[資料引擎] 正在抓取歷史股價...
+[資料引擎] 最新收盤價: 1885.00, 20日均線: 1917.31
+
+[LLM 語意分析]
+-> 無法連線至 Ollama (localhost:11434)，改用簡易關鍵字模擬情緒。
+- 新聞: Foreign Stocks Are Reeling From the Iran War. Buying the Dip Could Pay Off.
+  -> 關鍵字判斷: 利多 (+1)
+- 新聞: Dow Jones Futures Fall As Oil Prices Surge Above $90 On Tanker Attacks, Port Disruption
+  -> 關鍵字判斷: 利多 (+1)
+- 新聞: TSMC (TSM) Rises As Market Takes a Dip: Key Facts
+  -> 關鍵字判斷: 中立
+- 新聞: Meta Expands In-House AI Chip Roadmap
+  -> 關鍵字判斷: 中立
+- 新聞: Prediction: 2 Stocks That Will Be Worth More Than Amazon 3 Years From Now
+  -> 關鍵字判斷: 中立
+- 新聞: Nvidia Bucks U.S.-Iran Jitters As Tech Shines; Is Nvidia A Buy Or Sell Now?
+  -> 關鍵字判斷: 利多 (+1)
+- 新聞: Meta unveils four custom AI chips for data center growth
+  -> 關鍵字判斷: 利多 (+1)
+- 新聞: Iran Conflict Puts TSMC Supply Chain Resilience And Valuation In Focus
+  -> 關鍵字判斷: 利多 (+1)
+
+[證據提取] 總正面證據 (r) = 新聞(5) + 技術面(0) = 5
+[證據提取] 總負面證據 (s) = 新聞(0) + 技術面(1) = 1
+
+[主觀邏輯引擎] 開始計算...
+
+========================================
+ 📈 最終判斷報告：2330.TW
+----------------------------------------
+ 確信度 (b) : 0.6250
+ 不相信度 (d): 0.1250
+ 不確定性 (u): 0.2500
+----------------------------------------
+建議：🟢 【買入】 (Buy) 
+理由：信心水準高 (b > 0.6) 且不確定性低 (u < 0.3)。
+========================================

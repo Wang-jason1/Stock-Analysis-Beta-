@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SASA AI 股市決策系統</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <div class="app-container">
+        <header class="glass-header">
+            <h1><i class="fa-solid fa-chart-line"></i> SASA AI 決策系統</h1>
+            <p>由 Subjective Logic 與本地端大語言模型驅動的總經與個股分析</p>
+        </header>
+
+        <section class="macro-dashboard glass-panel">
+            <div class="panel-header">
+                <h2><i class="fa-solid fa-earth-asia"></i> 全球宏觀局勢與受惠產業</h2>
+                <button id="refreshMacroBtn" class="btn-icon" title="重新整理宏觀分析">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                </button>
+            </div>
+            <div id="macroContent" class="macro-content">
+                <div class="loading">正在抓取並分析全球重大新聞（顯示器、能源、利率、通膨...）</div>
+            </div>
+        </section>
+
+        <main class="main-content">
+            <section class="selection-panel glass-panel">
+                <div class="panel-header">
+                    <h2><i class="fa-solid fa-layer-group"></i> 選擇分析標的</h2>
+                    <div class="search-box">
+                        <i class="fa-solid fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="跨產業搜尋代碼或公司名稱...">
+                    </div>
+                </div>
+                <div id="stockTree" class="stock-tree">
+                    <!-- Dynamic Content -->
+                    <div class="loading">載入股票資料中...</div>
+                </div>
+                <div id="dynamicSearchResults" class="dynamic-results"></div>
+            </section>
+
+            <section class="action-panel">
+                <div class="selected-stocks glass-panel">
+                    <h2>已選標的 (<span id="selectedCount">0</span>)</h2>
+                    <ul id="selectedList" class="selected-list">
+                        <!-- Dynamic Content -->
+                        <li class="empty-msg">尚未選擇任何股票</li>
+                    </ul>
+                    <button id="analyzeBtn" class="btn-primary" disabled>
+                        <span><i class="fa-solid fa-robot"></i> 開始 AI 分析</span>
+                        <div class="spinner hidden"></div>
+                    </button>
+                    <div id="errorMsg" class="error-msg hidden"></div>
+                </div>
+
+                <div class="results-panel glass-panel">
+                    <h2><i class="fa-solid fa-square-poll-vertical"></i> 分析報告</h2>
+                    <div id="resultsContainer" class="results-container">
+                        <!-- Dynamic Content -->
+                        <div class="empty-msg">請先從左側選擇標的並點擊分析</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

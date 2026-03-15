@@ -1,0 +1,92 @@
+services:
+  # API Gateway (Orchestrator & UI)
+  gateway:
+    build: .
+    command: ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8000"]
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - OLLAMA_URL=http://ollama:11434
+      - NEWS_AGENT_URL=http://news-agent:8001
+      - STOCK_AGENT_URL=http://stock-agent:8002
+      - FORUM_AGENT_URL=http://forum-agent:8003
+    depends_on:
+      - news-agent
+      - stock-agent
+      - forum-agent
+    networks:
+      - sasa-network
+
+  # Specialized News Analysis Agent
+  news-agent:
+    build: .
+    command: ["uvicorn", "news_agent:app", "--host", "0.0.0.0", "--port", "8001"]
+    ports:
+      - "8001:8001"
+    volumes:
+      - .:/app
+    environment:
+      - OLLAMA_URL=http://ollama:11434
+    depends_on:
+      - ollama
+    networks:
+      - sasa-network
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+  # Specialized Stock Technical Agent
+  stock-agent:
+    build: .
+    command: ["uvicorn", "stock_agent:app", "--host", "0.0.0.0", "--port", "8002"]
+    ports:
+      - "8002:8002"
+    volumes:
+      - .:/app
+    networks:
+      - sasa-network
+
+  # Specialized Forum Sentiment Agent
+  forum-agent:
+    build: .
+    command: ["uvicorn", "forum_agent:app", "--host", "0.0.0.0", "--port", "8003"]
+    ports:
+      - "8003:8003"
+    volumes:
+      - .:/app
+    environment:
+      - OLLAMA_URL=http://ollama:11434
+    depends_on:
+      - ollama
+    networks:
+      - sasa-network
+
+  ollama:
+    image: ollama/ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-data:/root/.ollama
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    networks:
+      - sasa-network
+    entrypoint: ["/bin/sh", "-c", "/usr/bin/ollama serve & sleep 5 && /usr/bin/ollama pull llama3 && /usr/bin/ollama pull mistral && tail -f /dev/null"]
+
+networks:
+  sasa-network:
+    driver: bridge
+
+volumes:
+  ollama-data:
